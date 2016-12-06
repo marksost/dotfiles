@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+# Add source files path
+export SOURCEPATH="$HOME/src";
+
+# Add SoulCycle path
+export SCPATH="$SOURCEPATH/sc";
+
+# Add Hearst path
+export HEARSTPATH="$SOURCEPATH/hearst";
+
+# Add personal path
+export PERSONALPATH="$SOURCEPATH/marksost";
+
+# Add GOPATH
+export GOPATH="$SOURCEPATH/go";
+
+# Add GOMAXPROCS
+export GOMAXPROCS=1;
+
+# Add SCALA_HOME
+export SCALA_HOME="$SOURCEPATH/scala"
+
+# Set virualenv vars
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source `which virtualenvwrapper.sh`
+
+# Setup Deis key name env vars
+export DEISFEATUREKEY=$HOME/.ssh/feature-deis-20160603.pem;
+export DEISLOADTESTKEY=$HOME/.ssh/loadtest-deis-20160603.pem;
+export DEISPRODKEY=$HOME/.ssh/prod-deis-20160603.pem;
+export DEISSTAGEKEY=$HOME/.ssh/stage-deis-20160603.pem;
+
+# Setup Go config pathing
+export AEON_CONFIG=$SOURCEPATH/configs/aeon.json
+
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING='UTF-8';
+
+# Increase Bash history size. Allow 32³ entries; the default is 500.
+# Omit duplicates and commands that begin with a space from history.
+export HISTSIZE='32768';
+export HISTFILESIZE="${HISTSIZE}";
+export HISTCONTROL='ignoreboth';
+
+# Prefer US English and use UTF-8.
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';

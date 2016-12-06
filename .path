@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
+
+# Add `$GOPATH/bin` to `$PATH`
+export PATH="$PATH:$GOPATH/bin";
+
+# Add `$SCALA_HOME/bin` to `$PATH`
+export PATH="$PATH:$SCALA_HOME/bin";
+
+# Add composer bin to `$PATH`
+export PATH="$PATH:$HOME/.composer/vendor/bin";
+
+# Add Postgres bin to `$PATH`
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/";
+
+# Add RVM to `$PATH`
+export PATH="$PATH:$HOME/.rvm/bin"
+
