@@ -13,8 +13,8 @@ function run() {
 		--exclude "mac.sh" \
 		--exclude "ssh.sh" \
 		--exclude "README.md" \
-		-avh --no-perms . ~/test;
-	source ~/test/.bash_profile;
+		-avh --no-perms . ~;
+	source ~/.bash_profile;
 }
 
 # Allow force to prevent confirmation message
