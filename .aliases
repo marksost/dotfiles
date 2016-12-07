@@ -31,6 +31,7 @@ alias dssh='dinghy ssh'
 
 # Docker aliases
 alias dps='docker ps'
+# NOTE: uncomment if using Dinghy instead of Docker for Mac
 # alias dps='$(dinghy shellinit) && docker ps'
 alias dexec='docker exec -it'
 alias dockerimagesrm='docker images -a | sed "1 d" | awk "{print $3}" | xargs -L1 docker rmi -f'
@@ -90,13 +91,14 @@ alias dt="cd ~/Desktop"
 alias src="cd ~/src"
 alias cdgo='cd $GOPATH'
 alias cdhearst='cd $HEARSTPAATH'
+alias cdsc='cd $SCPATH'
 alias cdscala='cd $SCALAHOME'
 alias cdsrc='cd $SOURCEPATH'
 
 # SSH aliases
 alias keychain-deis='ssh-add -D && ssh-add -K $DEISFEATUREKEY $DEISLOADTESTKEY $DEISPRODKEY $DEISSTAGEKEY'
-alias keychain-sostmark='ssh-add -D && ssh-add -K ~/.ssh/sostmark-aws-default-pair.pem'
-alias keychain-self='ssh-add -D && ssh-add -K ~/.ssh/id_rsa'
+alias keychain-self='ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME'
+alias keychain-sostmark='ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

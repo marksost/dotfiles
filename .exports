@@ -26,6 +26,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source `which virtualenvwrapper.sh`
 
+# Set personal SSH key name env var
+export PERSONALKEYNAME="id_rsa"
+
 # Setup Deis key name env vars
 export DEISFEATUREKEY=$HOME/.ssh/feature-deis-20160603.pem;
 export DEISLOADTESTKEY=$HOME/.ssh/loadtest-deis-20160603.pem;

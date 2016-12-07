@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-# Change to git source directory
-cd "$(dirname "${BASH_SOURCE}")";
-
-# Ensure the latest codebase is there
+# Ensure the latest codebase is checked out
 git pull origin master;
 
 # Function to execute
@@ -11,18 +8,23 @@ git pull origin master;
 function run() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
-		--exclude ".macos" \
 		--exclude "bootstrap.sh" \
+		--exclude "cli.sh" \
+		--exclude "mac.sh" \
+		--exclude "ssh.sh" \
 		--exclude "README.md" \
 		-avh --no-perms . ~/test;
 	source ~/test/.bash_profile;
 }
 
+# Allow force to prevent confirmation message
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	run;
 else
+	# Prompt user
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
+	# Check response
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		run;
 	fi;
