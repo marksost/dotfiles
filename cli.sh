@@ -52,6 +52,7 @@ python get-pip.py
 
 # Install PIP utilities
 pip install --upgrade pip setuptools
+pip install awscli
 pip install virtualenv
 pip install virtualenvwrapper
 
