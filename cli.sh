@@ -42,6 +42,9 @@ brew install fleetctl
 brew install jq
 brew install redis
 
+# Install IT tools
+brew install siege
+
 # Install NPM packages
 npm install -g jshint bower grunt-cli
 
