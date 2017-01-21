@@ -43,7 +43,11 @@ brew install jq
 brew install redis
 
 # Install IT tools
+brew install pv
 brew install siege
+
+# Install MySQL
+brew install mysql
 
 # Install NPM packages
 npm install -g jshint bower grunt-cli
