@@ -7,7 +7,7 @@ export SOURCEPATH="$HOME/src";
 export SCPATH="$SOURCEPATH/sc";
 
 # Add Hearst path
-export HEARSTPATH="$SOURCEPATH/hearst";
+export HEARSTPATH="$SOURCEPATH/h";
 
 # Add personal path
 export PERSONALPATH="$SOURCEPATH/marksost";
@@ -37,6 +37,7 @@ export DEISSTAGEKEY=$HOME/.ssh/stage-deis-20160603.pem;
 
 # Setup Go config pathing
 export AEON_CONFIG=$SOURCEPATH/configs/aeon.json
+export MILESTONES_CONFIG=$SOURCEPATH/configs/ms.json
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';

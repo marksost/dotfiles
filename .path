@@ -13,8 +13,10 @@ export PATH="$PATH:$SCALA_HOME/bin";
 export PATH="$PATH:$HOME/.composer/vendor/bin";
 
 # Add Postgres bin to `$PATH`
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/";
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin";
 
 # Add RVM to `$PATH`
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.rvm/bin";
 
+# Add sbin to the `$PATH`
+export PATH="/usr/local/sbin::$PATH";

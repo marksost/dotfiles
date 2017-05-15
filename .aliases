@@ -33,8 +33,16 @@ alias dssh='dinghy ssh'
 alias dps='docker ps'
 # NOTE: uncomment if using Dinghy instead of Docker for Mac
 # alias dps='$(dinghy shellinit) && docker ps'
+# NOTE: uncomment if using Minikube instead of Docker for Mac
+# alias dps='eval $(minikube docker-env) && docker ps'
 alias dexec='docker exec -it'
 alias dockerimagesrm='docker images -a | sed "1 d" | awk "{print $3}" | xargs -L1 docker rmi -f'
+
+# Minikube aliases
+alias mkde='eval $(minikube docker-env)'
+
+# Kubectl aliases
+alias kctl='kubectl'
 
 # Docker compose aliases
 alias dc='docker-compose'
@@ -67,6 +75,7 @@ alias gr='git rm'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbr='git branch -r'
+alias developmerged='git checkout development && gfp && git branch -D'
 alias mastermerged='git checkout master && gfp && git branch -D'
 alias goddammit='git reset --soft HEAD`^'
 alias heckit='git reset --hard HEAD'
@@ -76,6 +85,7 @@ alias fuckoffpyc='find . -name "*.pyc" -exec rm -rf {} \;'
 alias aeon='go build && ./aeon'
 alias dispatchr='go build && ./dispatchr'
 alias img='go build && ./img'
+alias ms='go build && ./milestones'
 alias ggo='ginkgo'
 alias gotwc='go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out'
 
@@ -99,14 +109,17 @@ alias cdsrc='cd $SOURCEPATH'
 alias keychain-deis='ssh-add -D && ssh-add -K $DEISFEATUREKEY $DEISLOADTESTKEY $DEISPRODKEY $DEISSTAGEKEY'
 alias keychain-self='ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME'
 alias keychain-sostmark='ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem'
+alias sshjumpdev='ssh msost@54.144.220.1'
+alias sshproddb04='ssh -L 3307:127.0.0.1:3306 msost@prod-db-04.ext.aws.soul-cycle.it'
+alias sshqaweb01='ssh -L 3307:10.0.33.32:3306 msost@qa-web-01.ext.aws.soul-cycle.it'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-	export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+    colorflag="--color"
+    export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
 else # macOS `ls`
-	colorflag="-G"
-	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
+    colorflag="-G"
+    export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
 # List all files colorized in long format
@@ -180,7 +193,7 @@ alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="lwp-request -m '$method'"
+    alias "$method"="lwp-request -m '$method'"
 done
 
 # Lock the screen (when going AFK)
