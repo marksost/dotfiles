@@ -39,10 +39,20 @@ alias dexec='docker exec -it'
 alias dockerimagesrm='docker images -a | sed "1 d" | awk "{print $3}" | xargs -L1 docker rmi -f'
 
 # Minikube aliases
+alias mk='minikube'
 alias mkde='eval $(minikube docker-env)'
 
 # Kubectl aliases
 alias kctl='kubectl'
+alias kctl='kubectl'
+alias kexec='kubectl exec -it'
+alias kcr='kubectl create -f'
+alias kdel='kubectl delete'
+alias kgetall='kubectl get pods,services,deployments,statefulsets'
+alias kgetdeps='kubectl get deployments'
+alias kgetpods='kubectl get pods'
+alias kgetsvcs='kubectl get services'
+alias kgetsss='kubectl get statefulsets'
 
 # Docker compose aliases
 alias dc='docker-compose'
