@@ -44,7 +44,6 @@ alias mkde='eval $(minikube docker-env)'
 
 # Kubectl aliases
 alias kctl='kubectl'
-alias kctl='kubectl'
 alias kexec='kubectl exec -it'
 alias kcr='kubectl create -f'
 alias kdel='kubectl delete'
