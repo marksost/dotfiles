@@ -105,6 +105,9 @@ alias gd='grunt dev'
 # Hearst aliases
 alias refresh-aws-cache='$HEARSTPATH/atlas/provisioning/inventory/ec2.py --refresh-cache'
 
+# SoulCycle aliases
+alias reownbin='sudo chown -R $(whoami) /usr/local/bin'
+
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
