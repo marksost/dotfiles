@@ -52,6 +52,9 @@ brew install mysql
 # Install NPM packages
 npm install -g jshint bower grunt-cli
 
+# Install gems
+gem install travis
+
 # Get and install PIP
 cd /tmp
 curl -O https://bootstrap.pypa.io/get-pip.py
