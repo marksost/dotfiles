@@ -6,6 +6,9 @@ export SOURCEPATH="$HOME/src";
 # Add SoulCycle path
 export SCPATH="$SOURCEPATH/sc";
 
+# Add SoulCycle Podium path
+export PODIUMPATH="$SCPATH/podium-local";
+
 # Add Hearst path
 export HEARSTPATH="$SOURCEPATH/h";
 
