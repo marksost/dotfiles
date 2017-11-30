@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-# NOTE: Make sure XCode (CLI tools) is installed before running this script
-
 # Install brew if needed
 if ! hash brew &> /dev/null; then
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+# Ensure directories are writable
+sudo chown -R $(whoami) /usr/local/bin
 
 # Ensure brew is up to date
 brew update
@@ -41,6 +42,7 @@ brew install ansible
 brew install fleetctl
 brew install jq
 brew install redis
+brew install dep
 
 # Install IT tools
 brew install pv
@@ -55,16 +57,17 @@ npm install -g jshint bower grunt-cli
 # Install gems
 gem install travis
 
+# Ensure directories are writable
+sudo chown -R $(whoami) /Library/Python/2.7
+
 # Get and install PIP
 cd /tmp
 curl -O https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 
 # Install PIP utilities
-pip install --upgrade pip setuptools
-pip install awscli
-pip install virtualenv
-pip install virtualenvwrapper
+pip install --upgrade pip setuptools --ignore-installed six
+pip install awscli virtualenv virtualenvwrapper --ignore-installed six
 
 # Install Deis utilities
 cd /usr/local/bin/
