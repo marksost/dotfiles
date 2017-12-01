@@ -1,0 +1,40 @@
+AutoSpell
+Babel
+Babel Snippets
+Backbone.js
+Bower
+Can I Use
+Console API Snippets
+DocBlockr
+Dockerfile Syntax Highlighting
+Emmet
+Emmet Css Snippets
+Ginkgo Completions
+GitGutter
+GoSublime
+Grunt Snippets
+Hipster Ipsum
+HTML5
+INI
+Javascript & NodeJS Snippets
+jQuery
+JS Snippets
+jsfmt
+JSHint
+JSONLint
+Markdown Extended
+Markdown Preview
+nginx
+Package Resource Viewer
+PHP-Twig
+PhpDoc
+Sass
+SASS Snippets
+SCSS
+SCSS Snippets
+SideBarEnhancements
+SublimeLinter
+SublimeLinter-jshint
+SublimeLinter-phplint
+Syntax Highlighting for Sass
+Twig
