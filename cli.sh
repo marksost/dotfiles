@@ -52,7 +52,7 @@ brew install siege
 brew install mysql
 
 # Install NPM packages
-npm install -g jshint bower grunt-cli
+npm install -g eslint jshint bower grunt-cli
 
 # Install gems
 gem install travis
