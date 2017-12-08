@@ -48,6 +48,14 @@ brew install dep
 brew install pv
 brew install siege
 
+# Install k8s tools
+brew install kubectl
+brew install kubernetes-helm
+
+# Install GCP tools
+# NOTE: Interractive
+curl https://sdk.cloud.google.com | bash
+
 # Install MySQL
 brew install mysql
 
