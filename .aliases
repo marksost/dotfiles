@@ -14,25 +14,8 @@ alias sourcebrc='. $HOME/.bashrc'
 alias editbp='subl $HOME/.bash_profile'
 alias editbrc='subl $HOME/.bashrc'
 
-# Codeception aliases
-alias codecepttest='../vendor/bin/codecept build && ../vendor/bin/codecept run -vvv'
-alias codeceptcover='../vendor/bin/codecept build && ../vendor/bin/codecept run -vvv --coverage --coverage-html'
-
-# Deis aliases
-alias dies='deis'
-
-# Dinghy aliases
-alias dcreate='dinghy create'
-alias ddestroy='dinghy destroy'
-alias dup='dinghy up'
-alias dhalt='dinghy halt'
-alias dip='dinghy ip'
-alias dssh='dinghy ssh'
-
 # Docker aliases
 alias dps='docker ps'
-# NOTE: uncomment if using Dinghy instead of Docker for Mac
-# alias dps='$(dinghy shellinit) && docker ps'
 # NOTE: uncomment if using Minikube instead of Docker for Mac
 # alias dps='eval $(minikube docker-env) && docker ps'
 alias dexec='docker exec -it'
@@ -46,13 +29,11 @@ alias mkde='eval $(minikube docker-env)'
 alias kctl='kubectl'
 alias kexec='kubectl exec -it'
 alias kcr='kubectl create -f'
+alias kap='kubectl apply -f'
 alias kdel='kubectl delete'
-alias kgetall='kubectl get all,pv,pvc'
-alias kgetdeploys='kubectl get deploy'
-alias kgetpods='kubectl get pods'
-alias kgetpv='kubectl get pv'
-alias kgetpvc='kubectl get pvc'
-alias kgetsvcs='kubectl get svc'
+
+# GCloud aliases
+alias gcp='gcloud'
 
 # Docker compose aliases
 alias dc='docker-compose'
@@ -65,13 +46,12 @@ alias dcstop='docker-compose stop'
 alias gs='git status'
 alias ga='git add'
 alias gall='git add --all'
-alias ga*='git add *'
 alias gpom='git push origin master'
-alias gpod='git push origin development'
 alias gpocb='git push origin $(git_branch_name)'
 alias gpo='git push origin'
 alias gpfo='git push -f origin'
 alias gpuo='git push -u origin'
+alias gpuocb='git push -u origin $(git_branch_name)'
 alias got='git'
 alias gc='git commit -m '
 alias gf='git fetch --prune'
@@ -100,14 +80,11 @@ alias ms='go build && ./milestones'
 alias ggo='ginkgo'
 alias gotwc='go test -coverprofile=coverage.out && go tool cover -html=coverage.out && rm coverage.out'
 
-# Grunt aliases
-alias gd='grunt dev'
-
-# Hearst aliases
-alias refresh-aws-cache='$HEARSTPATH/atlas/provisioning/inventory/ec2.py --refresh-cache'
-
 # SoulCycle aliases
 alias reownbin='sudo chown -R $(whoami) /usr/local/bin'
+
+# Release aliases
+alias tag_repo='bash /Users/$(whoami)/src/sc/release/tag-repo.sh'
 
 # Shortcuts
 alias dl="cd ~/Downloads"
@@ -123,9 +100,6 @@ alias cdsrc='cd $SOURCEPATH'
 alias keychain-deis='ssh-add -D && ssh-add -K $DEISFEATUREKEY $DEISLOADTESTKEY $DEISPRODKEY $DEISSTAGEKEY'
 alias keychain-self='ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME'
 alias keychain-sostmark='ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem'
-alias sshjumpdev='ssh msost@54.144.220.1'
-alias sshproddb04='ssh -L 3307:127.0.0.1:3306 msost@prod-db-04.ext.aws.soul-cycle.it'
-alias sshqaweb01='ssh -L 3307:127.0.0.1:3306 msost@qa-db-01.ext.aws.soul-cycle.it'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
