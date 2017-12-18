@@ -48,14 +48,19 @@ brew install dep
 # Install IT tools
 brew install pv
 brew install siege
+brew install terraform
 
 # Install k8s tools
 brew install kubectl
 brew install kubernetes-helm
 
-# Install GCP tools
-# NOTE: Interractive
-curl https://sdk.cloud.google.com | bash
+(
+  cd /tmp
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/kubernetes-client-darwin-amd64.tar.gz
+  tar -xzvf kubernetes-client-darwin-amd64.tar.gz
+  sudo cp kubernetes/client/bin/kubefed /usr/local/bin
+  sudo chmod +x /usr/local/bin/kubefed
+)
 
 # Install MySQL
 brew install mysql
@@ -82,3 +87,7 @@ pip install awscli virtualenv virtualenvwrapper --ignore-installed six
 cd /usr/local/bin/
 curl -sSL http://deis.io/deisctl/install.sh | sh -s 1.13.3
 curl -sSL http://deis.io/deis-cli/install.sh | sh
+
+# Install GCP tools
+# NOTE: Interractive
+curl https://sdk.cloud.google.com | bash
