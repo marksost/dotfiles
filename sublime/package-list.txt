@@ -4,7 +4,7 @@ Babel Snippets
 Backbone.js
 Bower
 Can I Use
-Console API Snippets
+Console API Snippets (JavaScript)
 DocBlockr
 Dockerfile Syntax Highlighting
 Emmet
@@ -16,7 +16,7 @@ Grunt Snippets
 Hipster Ipsum
 HTML5
 INI
-Javascript & NodeJS Snippets
+JavaScript & NodeJS Snippets
 jQuery
 JS Snippets
 jsfmt
@@ -25,7 +25,8 @@ JSONLint
 Markdown Extended
 Markdown Preview
 nginx
-Package Resource Viewer
+Package Control
+PackageResourceViewer
 PHP-Twig
 PhpDoc
 Sass
@@ -34,7 +35,8 @@ SCSS
 SCSS Snippets
 SideBarEnhancements
 SublimeLinter
-SublimeLinter-jshint
+SublimeLinter-contrib-eslint
 SublimeLinter-phplint
 Syntax Highlighting for Sass
+Terraform
 Twig
