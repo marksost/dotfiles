@@ -82,6 +82,7 @@ alias gotwc='go test -coverprofile=coverage.out && go tool cover -html=coverage.
 
 # SoulCycle aliases
 alias reownbin='sudo chown -R $(whoami) /usr/local/bin'
+alias poops='pops'
 
 # Release aliases
 alias tag_repo='bash /Users/$(whoami)/src/sc/release/tag-repo.sh'
