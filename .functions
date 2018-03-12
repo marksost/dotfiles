@@ -162,7 +162,6 @@ fi;
 
 # Release soulcycle repo
 function release_scs() {
-
     # Check for input
     [ $# -ne 1 ] && die "A previous release hash is required for this function to run." && return
 
@@ -185,14 +184,27 @@ function release_scs() {
 
     # Push tags
     git push --tags
-
 }
 
 # Echos the current directory's git branch name (if any)
 function git_branch_name() {
-
   echo -e "$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
     git rev-parse --short HEAD 2> /dev/null || \
     echo '(unknown)')"
+}
 
+# Encrypts SA private key files specified in first argument
+function encrypt_keys() {
+  # Check for input
+  [ $# -ne 1 ] && die "A directory is required for this function to run." && return
+
+  for FILE in $1/*.json; do ansible-vault encrypt "${FILE}"; done
+}
+
+# Decrypts SA private key files specified in first argument
+function decrypt_keys() {
+  # Check for input
+  [ $# -ne 1 ] && die "A directory is required for this function to run." && return
+
+  for FILE in $1/*.json; do ansible-vault decrypt "${FILE}"; done
 }
