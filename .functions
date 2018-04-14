@@ -8,30 +8,22 @@ NC='\033[0m' # No Color
 
 # Function to handle exiting with an error
 function die() {
-
     echo_red >&2 "$@"
-
 }
 
 # Function used to color echo text in green
 function echo_green() {
-
     echo -e "${GREEN}$@${NC}"
-
 }
 
 # Function used to color echo text in red
 function echo_red() {
-
     echo -e "${RED}$@${NC}"
-
 }
 
 # Function used to color echo text in yellow
 function echo_yellow() {
-
     echo -e "${YELLOW}$@${NC}"
-
 }
 
 # Get a character’s Unicode code point
@@ -198,7 +190,11 @@ function encrypt_keys() {
   # Check for input
   [ $# -ne 1 ] && die "A directory is required for this function to run." && return
 
-  for FILE in $1/*.json; do ansible-vault encrypt "${FILE}"; done
+  # Set vault ID to use
+  # NOTE: Default to a password prompt
+  VAULT_ID="${ANSIBLE_VAULT_PASSWORD_FILE:-@prompt}"
+
+  for FILE in $1/*.json; do ansible-vault encrypt --vault-id "${VAULT_ID}" "${FILE}"; done
 }
 
 # Decrypts SA private key files specified in first argument
@@ -206,5 +202,9 @@ function decrypt_keys() {
   # Check for input
   [ $# -ne 1 ] && die "A directory is required for this function to run." && return
 
-  for FILE in $1/*.json; do ansible-vault decrypt "${FILE}"; done
+  # Set vault ID to use
+  # NOTE: Default to a password prompt
+  VAULT_ID="${ANSIBLE_VAULT_PASSWORD_FILE:-@prompt}"
+
+  for FILE in $1/*.json; do ansible-vault decrypt --vault-id "${VAULT_ID}" "${FILE}"; done
 }

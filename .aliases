@@ -71,6 +71,7 @@ alias heckit='git reset --hard HEAD'
 
 # Python aliases
 alias fuckoffpyc='find . -name "*.pyc" -exec rm -rf {} \;'
+alias av='ansible-vault'
 
 # Go aliases
 alias aeon='go build && ./aeon'
