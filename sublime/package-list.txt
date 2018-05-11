@@ -1,42 +1,39 @@
-AutoSpell
-Babel
-Babel Snippets
-Backbone.js
-Bower
-Can I Use
-Console API Snippets (JavaScript)
-DocBlockr
-Dockerfile Syntax Highlighting
-Emmet
-Emmet Css Snippets
-Ginkgo Completions
-GitGutter
-GoSublime
-Grunt Snippets
-Hipster Ipsum
-HTML5
-INI
-JavaScript & NodeJS Snippets
-jQuery
-JS Snippets
-jsfmt
-JSHint
-JSONLint
-Markdown Extended
-Markdown Preview
-nginx
-Package Control
-PackageResourceViewer
-PHP-Twig
-PhpDoc
-Sass
-SASS Snippets
-SCSS
-SCSS Snippets
-SideBarEnhancements
-SublimeLinter
-SublimeLinter-contrib-eslint
-SublimeLinter-phplint
-Syntax Highlighting for Sass
-Terraform
-Twig
+API Blueprint.sublime-package
+Ansible Vault.sublime-package
+Backbone.sublime-package
+Bower.sublime-package
+Can I Use.sublime-package
+Console API Snippets (JavaScript).sublime-package
+Diffy.sublime-package
+DocBlockr.sublime-package
+Dockerfile Syntax Highlighting.sublime-package
+Emmet.sublime-package
+Ginkgo Completions.sublime-package
+GitGutter.sublime-package
+Grunt Snippets.sublime-package
+HTML5.sublime-package
+Hipster Ipsum.sublime-package
+INI.sublime-package
+JS Snippets.sublime-package
+JSONLint.sublime-package
+JavaScript & NodeJS Snippets.sublime-package
+LuaAutocomplete.sublime-package
+LuaExtended.sublime-package
+LuaFormat.sublime-package
+Markdown Extended.sublime-package
+Markdown Preview.sublime-package
+PHP-Twig.sublime-package
+Package Control.sublime-package
+PackageResourceViewer.sublime-package
+PhpDoc.sublime-package
+SASS Snippets.sublime-package
+SCSS Snippets.sublime-package
+SCSS.sublime-package
+Sass.sublime-package
+SideBarEnhancements.sublime-package
+SublimeLinter-eslint.sublime-package
+SublimeLinter-phplint.sublime-package
+Terraform.sublime-package
+Twig.sublime-package
+jQuery.sublime-package
+nginx.sublime-package
