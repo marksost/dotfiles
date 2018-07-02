@@ -190,11 +190,9 @@ function encrypt_keys() {
   # Check for input
   [ $# -ne 1 ] && die "A directory is required for this function to run." && return
 
-  # Set vault ID to use
-  # NOTE: Default to a password prompt
-  VAULT_ID="${ANSIBLE_VAULT_PASSWORD_FILE:-@prompt}"
-
-  for FILE in $1/*.json; do ansible-vault encrypt --vault-id "${VAULT_ID}" "${FILE}"; done
+  for FILE in $1/*.json; do
+    ansible-vault encrypt "${FILE}"
+  done
 }
 
 # Decrypts SA private key files specified in first argument
@@ -202,9 +200,12 @@ function decrypt_keys() {
   # Check for input
   [ $# -ne 1 ] && die "A directory is required for this function to run." && return
 
-  # Set vault ID to use
-  # NOTE: Default to a password prompt
-  VAULT_ID="${ANSIBLE_VAULT_PASSWORD_FILE:-@prompt}"
+  for FILE in $1/*.json; do
+    ansible-vault decrypt "${FILE}"
+  done
+}
 
-  for FILE in $1/*.json; do ansible-vault decrypt --vault-id "${VAULT_ID}" "${FILE}"; done
+# Executes whatever command + arguments are passed in every 5 seconds
+function loop5() {
+  while true; do $@ && echo ""; sleep 5; done;
 }

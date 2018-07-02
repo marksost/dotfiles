@@ -32,6 +32,12 @@ alias kcr='kubectl create -f'
 alias kap='kubectl apply -f'
 alias kdel='kubectl delete'
 alias kctlauth='gcloud container clusters get-credentials'
+alias kctlms='kubectl -n msost'
+alias kctldev='kubectl -n dev'
+alias kctlqa='kubectl -n qa'
+alias kctluat='kubectl -n uat'
+alias kctx='kubectx'
+alias kns='kubens'
 
 # GCloud aliases
 alias gcp='gcloud'

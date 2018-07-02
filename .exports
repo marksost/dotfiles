@@ -16,7 +16,11 @@ export HEARSTPATH="$SOURCEPATH/h";
 export PERSONALPATH="$SOURCEPATH/marksost";
 
 # Add GOPATH
-export GOPATH="$SOURCEPATH/go";
+# export GOPATH="$SOURCEPATH/go";
+export GOPATH="$PODIUMPATH/applications/go"; # NOTE: For podium-local
+
+# Add SoulCycle Go path
+export SCGOPATH="$GOPATH/src/github.com/soulcycle";
 
 # Add GOMAXPROCS
 export GOMAXPROCS=1;
@@ -40,7 +44,14 @@ export DEISSTAGEKEY=$HOME/.ssh/stage-deis-20160603.pem;
 
 # Setup Go config pathing
 export AEON_CONFIG=$SOURCEPATH/configs/aeon.json
+export FED_CONFIG=$SOURCEPATH/configs/fed.json
+export MIGRATE_CONFIG=$SOURCEPATH/configs/migrate-local.json
 export MILESTONES_CONFIG=$SOURCEPATH/configs/ms.json
+export POPS_CONFIG=$SOURCEPATH/configs/pops.json
+
+# Setup Github token
+export GITHUBTOKEN="<FILL ME IN>";
+export POPS_RELEASE_GITHUB_TOKEN=$GITHUBTOKEN;
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
