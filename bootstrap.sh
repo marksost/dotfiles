@@ -3,6 +3,9 @@
 # Ensure the latest codebase is checked out
 git pull origin master;
 
+# Install rsync
+sudo apt install -y rsync
+
 # Function to execute
 # NOTE: Copies all top-level files from this repo into the bash source directory
 function run() {
