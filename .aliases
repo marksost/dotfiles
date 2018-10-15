@@ -38,6 +38,9 @@ alias kns='kubens'
 # GCloud aliases
 alias gcp='gcloud'
 
+# Cloud Shell aliases
+alias restorecli='bash ~/src/marksost/dotfiles/cli.sh'
+
 # Docker compose aliases
 alias dc='docker-compose'
 alias dcup='docker-compose up'
