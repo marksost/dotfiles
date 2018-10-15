@@ -4,7 +4,7 @@
 git pull origin master;
 
 # Install rsync
-sudo apt install -y rsync
+command -v $program &> /dev/null || sudo apt install -y rsync
 
 # Function to execute
 # NOTE: Copies all top-level files from this repo into the bash source directory
