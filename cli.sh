@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# Make bin directory if needed
+# Make directories if needed
 [ -d "${HOME}/bin" ] || mkdir -p "${HOME}/bin"
+[ -d "${HOME}/src/marksost" ] || mkdir -p "${HOME}/src/marksost"
+[ -d "${HOME}/src/others" ] || mkdir -p "${HOME}/src/others"
+[ -d "${HOME}/src/sc" ] || mkdir -p "${HOME}/src/sc"
 
 # Install apt packages
 echo "Installing apt packages..."
@@ -33,11 +36,14 @@ echo -e "\nInstalling Terraform..."
 
 # Install Kuberentes utils
 echo -e "\nInstalling Kuberentes utils..."
-rm -rf $HOME/.kubectx
-git clone https://github.com/ahmetb/kubectx.git $HOME/.kubectx
-sudo chmod +x $HOME/.kubectx/kubectx $HOME/.kubectx/kubens
-mv $HOME/.kubectx/kubectx $HOME/bin/.
-mv $HOME/.kubectx/kubens $HOME/bin/.
+rm -rf $HOME/src/others/kubectx
+git clone https://github.com/ahmetb/kubectx.git $HOME/src/others/kubectx
+sudo chmod +x $HOME/.kubectx/kubectx $HOME/src/others/kubectx/kubens
+mv $HOME/src/others/kubectx/kubectx $HOME/bin/.
+mv $HOME/src/others/kubectx/kubens $HOME/bin/.
 COMPDIR=$(pkg-config --variable=completionsdir bash-completion)
-sudo ln -sf $HOME/.kubectx/completion/kubectx.bash $COMPDIR/kubectx
-sudo ln -sf $HOME/.kubectx/completion/kubens.bash $COMPDIR/kubens
+sudo ln -sf $HOME/src/others/kubectx/completion/kubectx.bash $COMPDIR/kubectx
+sudo ln -sf $HOME/src/others/kubectx/completion/kubens.bash $COMPDIR/kubens
+
+rm -rf $HOME/src/others/kubectx
+git clone https://github.com/jonmosco/kube-ps1.git $HOME/src/others/kube-ps1
