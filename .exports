@@ -19,38 +19,32 @@ export PERSONALPATH="$SOURCEPATH/marksost";
 # export GOPATH="$SOURCEPATH/go";
 export GOPATH="$PODIUMPATH/applications/go"; # NOTE: For podium-local
 
-# Add SoulCycle Go path
+# Add SoulCycle Go paths
 export SCGOPATH="$GOPATH/src/github.com/soulcycle";
+export POPSPATH="$GOPATH/src/github.com/soulcycle/pops";
 
 # Add GOMAXPROCS
 export GOMAXPROCS=1;
 
 # Add SCALA_HOME
-export SCALA_HOME="$SOURCEPATH/scala"
+export SCALA_HOME="$SOURCEPATH/scala";
 
 # Set virualenv vars
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source `which virtualenvwrapper.sh`
+export WORKON_HOME=$HOME/.virtualenvs;
+export PROJECT_HOME=$HOME/Devel;
+source `which virtualenvwrapper.sh`;
 
 # Set personal SSH key name env var
-export PERSONALKEYNAME="id_rsa"
-
-# Setup Deis key name env vars
-export DEISFEATUREKEY=$HOME/.ssh/feature-deis-20160603.pem;
-export DEISLOADTESTKEY=$HOME/.ssh/loadtest-deis-20160603.pem;
-export DEISPRODKEY=$HOME/.ssh/prod-deis-20160603.pem;
-export DEISSTAGEKEY=$HOME/.ssh/stage-deis-20160603.pem;
+export PERSONALKEYNAME="id_rsa";
 
 # Setup Go config pathing
-export AEON_CONFIG=$SOURCEPATH/configs/aeon.json
-export FED_CONFIG=$SOURCEPATH/configs/fed.json
-export MIGRATE_CONFIG=$SOURCEPATH/configs/migrate-local.json
-export MILESTONES_CONFIG=$SOURCEPATH/configs/ms.json
-export POPS_CONFIG=$SOURCEPATH/configs/pops.json
+export FED_CONFIG=$SOURCEPATH/configs/fed.json;
+export MIGRATE_CONFIG=$SOURCEPATH/configs/migrate-local.json;
+export MILESTONES_CONFIG=$SOURCEPATH/configs/ms.json;
+export POPS_CONFIG=$SOURCEPATH/configs/pops.json;
 
 # Setup Github token
-export GITHUBTOKEN="<FILL ME IN>";
+export GITHUBTOKEN="<fill me in>";
 export POPS_RELEASE_GITHUB_TOKEN=$GITHUBTOKEN;
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
