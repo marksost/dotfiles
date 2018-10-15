@@ -10,7 +10,6 @@ function run() {
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "cli.sh" \
-		--exclude "mac.sh" \
 		--exclude "ssh.sh" \
 		--exclude "README.md" \
 		-avh --no-perms . ~;
