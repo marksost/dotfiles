@@ -32,6 +32,10 @@ echo -e "\nInstalling Terraform..."
 echo -e "\nInstalling Kuberentes utils..."
 rm -rf ~/.kubectx
 git clone https://github.com/ahmetb/kubectx.git ~/.kubectx
+sudo chmod +x ~/.kubectx/kubectx
+sudo chmod +x ~/.kubectx/kubens
+mv ~/.kubectx/kubectx ~/bin/.
+mv ~/.kubectx/kubens ~/bin/.
 COMPDIR=$(pkg-config --variable=completionsdir bash-completion)
-sudo ln -sf ~/.kubectx/completion/kubens.bash $COMPDIR/kubens
 sudo ln -sf ~/.kubectx/completion/kubectx.bash $COMPDIR/kubectx
+sudo ln -sf ~/.kubectx/completion/kubens.bash $COMPDIR/kubens
