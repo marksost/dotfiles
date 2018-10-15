@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Make bin directory if needed
+[ -d "${HOME}/bin" ] || mkdir -p "${HOME}/bin"
+
 # Install apt packages
 echo "Installing apt packages..."
 sudo apt update
@@ -30,12 +33,11 @@ echo -e "\nInstalling Terraform..."
 
 # Install Kuberentes utils
 echo -e "\nInstalling Kuberentes utils..."
-rm -rf ~/.kubectx
-git clone https://github.com/ahmetb/kubectx.git ~/.kubectx
-sudo chmod +x ~/.kubectx/kubectx
-sudo chmod +x ~/.kubectx/kubens
-mv ~/.kubectx/kubectx ~/bin/.
-mv ~/.kubectx/kubens ~/bin/.
+rm -rf $HOME/.kubectx
+git clone https://github.com/ahmetb/kubectx.git $HOME/.kubectx
+sudo chmod +x $HOME/.kubectx/kubectx $HOME/.kubectx/kubens
+mv $HOME/.kubectx/kubectx $HOME/bin/.
+mv $HOME/.kubectx/kubens $HOME/bin/.
 COMPDIR=$(pkg-config --variable=completionsdir bash-completion)
-sudo ln -sf ~/.kubectx/completion/kubectx.bash $COMPDIR/kubectx
-sudo ln -sf ~/.kubectx/completion/kubens.bash $COMPDIR/kubens
+sudo ln -sf $HOME/.kubectx/completion/kubectx.bash $COMPDIR/kubectx
+sudo ln -sf $HOME/.kubectx/completion/kubens.bash $COMPDIR/kubens
