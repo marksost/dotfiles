@@ -3,7 +3,6 @@ apt-transport-https
 build-essential
 ca-certificates
 curl
-kubectx
 pv
 redis-server
 software-properties-common
