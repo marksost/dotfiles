@@ -1,0 +1,9 @@
+ansible
+apt-transport-https
+build-essential
+ca-certificates
+curl
+pv
+redis-server
+software-properties-common
+unzip
