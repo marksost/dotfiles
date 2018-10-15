@@ -45,5 +45,5 @@ COMPDIR=$(pkg-config --variable=completionsdir bash-completion)
 sudo ln -sf $HOME/src/others/kubectx/completion/kubectx.bash $COMPDIR/kubectx
 sudo ln -sf $HOME/src/others/kubectx/completion/kubens.bash $COMPDIR/kubens
 
-rm -rf $HOME/src/others/kubectx
+rm -rf $HOME/src/others/kube-ps1
 git clone https://github.com/jonmosco/kube-ps1.git $HOME/src/others/kube-ps1
