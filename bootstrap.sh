@@ -10,12 +10,14 @@ command -v $program &> /dev/null && sudo apt install -y rsync
 # NOTE: Copies all top-level files from this repo into the bash source directory
 function run() {
 	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
+    --exclude ".DS_Store" \
+    --exclude "apt/" \
 		--exclude "bootstrap.sh" \
 		--exclude "cli.sh" \
 		--exclude "ssh.sh" \
 		--exclude "README.md" \
 		-avh --no-perms . ~;
+
 	source ~/.bash_profile;
 }
 
