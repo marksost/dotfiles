@@ -31,6 +31,9 @@ done
 # Install NPM packages
 npm install -g eslint jshint bower grunt-cli
 
+# Make sure Ruby gems are writable
+sudo chown -R $(whoami) /Library/Ruby/Gems
+
 # Install gems
 gem install github_changelog_generator
 gem install travis
