@@ -28,6 +28,12 @@ for FORMULA in $(cat "./brew/formula-list.txt"); do
   brew install "${FORMULA}"
 done
 
+# Install docker-* utils
+curl -sL https://raw.githubusercontent.com/marksost/docker-cloudsql/master/install.sh | bash
+curl -sL https://raw.githubusercontent.com/marksost/docker-redis/master/install.sh | bash
+mv docker-cloudsql /usr/local/bin/.
+mv docker-redis /usr/local/bin/.
+
 # Install NPM packages
 npm install -g eslint jshint bower grunt-cli
 
