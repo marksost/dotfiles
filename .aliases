@@ -109,7 +109,7 @@ alias keychain-self="ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME"
 alias keychain-aws="ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem"
 
 # Docker CloudSQL aliases
-alias dcsql-stop'docker-cloudsql stop'
+alias dcsql-stop='docker-cloudsql stop'
 alias dcsql-msost="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/playgrounds/msost/sa-keys/cloudsql-client-marks-playground-new-credentials.json -i marks-playground-new:us-east1:podium-global start"
 alias dcsql-devstage="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-devstage/sa-keys/cloudsql-client-podium-devstage-credentials.json -i podium-devstage:us-east1:podium-global-1 start"
 alias dcsql-loadtest="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-loadtest/sa-keys/cloudsql-client-podium-loadtest-credentials.json -i podium-loadtest:us-east1:podium-global-1 start"
