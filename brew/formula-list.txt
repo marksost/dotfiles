@@ -37,9 +37,10 @@ ios-deploy
 jpeg
 jq
 json-c
-kubectx
 kubernetes-cli
 kubernetes-helm
+kubectx
+kube-ps1
 libassuan
 libffi
 libgcrypt
