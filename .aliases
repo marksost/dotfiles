@@ -9,10 +9,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Bash aliases
-alias sourcebp='. $HOME/.bash_profile'
-alias sourcebrc='. $HOME/.bashrc'
-alias editbp='subl $HOME/.bash_profile'
-alias editbrc='subl $HOME/.bashrc'
+alias sourcebp=". $HOME/.bash_profile"
+alias sourcebrc=". $HOME/.bashrc"
+alias editbp="subl $HOME/.bash_profile"
+alias editbrc="subl $HOME/.bashrc"
 
 # Docker aliases
 alias dps='docker ps'
@@ -45,6 +45,7 @@ alias gcp='gcloud'
 # Docker compose aliases
 alias dc='docker-compose'
 alias dcup='docker-compose up'
+alias dcupd='docker-compose up -d'
 alias dcdown='docker-compose down'
 alias dcstart='docker-compose start'
 alias dcstop='docker-compose stop'
@@ -93,23 +94,26 @@ alias gotwc='go test -coverprofile=coverage.out && go tool cover -html=coverage.
 alias reownbin='sudo chown -R $(whoami) /usr/local/bin'
 alias poops='pops'
 
-# Release aliases
-alias tag_repo='bash /Users/$(whoami)/src/sc/release/tag-repo.sh'
-
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias src="cd ~/src"
-alias cdgo='cd $GOPATH'
-alias cdhearst='cd $HEARSTPAATH'
-alias cdsc='cd $SCPATH'
-alias cdscala='cd $SCALAHOME'
-alias cdsrc='cd $SOURCEPATH'
+alias cdgo="cd $GOPATH"
+alias cdsc="cd $SCPATH"
+alias cdscala="cd $SCALAHOME"
+alias cdsrc="cd $SOURCEPATH"
 
 # SSH aliases
-alias keychain-deis='ssh-add -D && ssh-add -K $DEISFEATUREKEY $DEISLOADTESTKEY $DEISPRODKEY $DEISSTAGEKEY'
-alias keychain-self='ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME'
-alias keychain-sostmark='ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem'
+alias keychain-sc="ssh-add -D && ssh-add -K $HOME/.ssh/$SOULCYCLEKEYNAME"
+alias keychain-self="ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME"
+alias keychain-aws="ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem"
+
+# Docker CloudSQL aliases
+alias dcsql-stop'docker-cloudsql stop'
+alias dcsql-msost="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/playgrounds/msost/sa-keys/cloudsql-client-marks-playground-new-credentials.json -i marks-playground-new:us-east1:podium-global start"
+alias dcsql-devstage="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-devstage/sa-keys/cloudsql-client-podium-devstage-credentials.json -i podium-devstage:us-east1:podium-global-1 start"
+alias dcsql-loadtest="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-loadtest/sa-keys/cloudsql-client-podium-loadtest-credentials.json -i podium-loadtest:us-east1:podium-global-1 start"
+alias dcsql-production="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-production/sa-keys/cloudsql-client-podium-production-credentials.json -i podium-production:us-east1:podium-global start"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

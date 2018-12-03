@@ -9,11 +9,8 @@ export SCPATH="$SOURCEPATH/sc";
 # Add SoulCycle Podium path
 export PODIUMPATH="$SCPATH/podium-local";
 
-# Add Hearst path
-export HEARSTPATH="$SOURCEPATH/h";
-
 # Add personal path
-export PERSONALPATH="$SOURCEPATH/marksost";
+export PERSONALPATH="$SOURCEPATH/msost";
 
 # Add GOPATH
 # export GOPATH="$SOURCEPATH/go";
@@ -34,8 +31,9 @@ export WORKON_HOME=$HOME/.virtualenvs;
 export PROJECT_HOME=$HOME/Devel;
 source `which virtualenvwrapper.sh`;
 
-# Set personal SSH key name env var
+# Set SSH key name env vars
 export PERSONALKEYNAME="id_rsa";
+export SOULCYCLEKEYNAME="soulcycle";
 
 # Setup Go config pathing
 export FED_CONFIG=$SOURCEPATH/configs/fed.json;

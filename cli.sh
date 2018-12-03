@@ -47,6 +47,19 @@ python get-pip.py
 pip install --upgrade pip setuptools --ignore-installed six
 pip install awscli virtualenv virtualenvwrapper --ignore-installed six
 
+# Install Istio
+(
+  cd $HOME
+  ISTIO_VERSION=$(curl -L -s https://api.github.com/repos/istio/istio/releases/latest | jq -r '.tag_name')
+  NAME="istio"
+  URL="https://github.com/istio/istio/releases/download/${ISTIO_VERSION}/istio-${ISTIO_VERSION}-osx.tar.gz"
+  echo "Downloading istio from ${URL} ..."
+  curl -L "${URL}" | tar xz
+  mv "${NAME}-${ISTIO_VERSION}" "${NAME}"
+  cd istio
+  cp bin/istioctl /usr/local/bin/.
+)
+
 # Install GCP tools
 # NOTE: Interractive
 curl https://sdk.cloud.google.com | bash
