@@ -104,9 +104,9 @@ alias cdscala="cd $SCALAHOME"
 alias cdsrc="cd $SOURCEPATH"
 
 # SSH aliases
-alias keychain-sc="ssh-add -D && ssh-add -K $HOME/.ssh/$SOULCYCLEKEYNAME"
-alias keychain-self="ssh-add -D && ssh-add -K $HOME/.ssh/$PERSONALKEYNAME"
-alias keychain-aws="ssh-add -D && ssh-add -K $HOME/.ssh/sostmark-aws-default-pair.pem"
+alias keychain-sc="ssh-add -D && ssh-add -k $HOME/.ssh/$SOULCYCLEKEYNAME"
+alias keychain-self="ssh-add -D && ssh-add -k $HOME/.ssh/$PERSONALKEYNAME"
+alias keychain-aws="ssh-add -D && ssh-add -k $HOME/.ssh/sostmark-aws-default-pair.pem"
 
 # Docker CloudSQL aliases
 alias dcsql-stop='docker-cloudsql stop'
