@@ -115,6 +115,9 @@ alias dcsql-devstage="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium
 alias dcsql-loadtest="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-loadtest/sa-keys/cloudsql-client-podium-loadtest-credentials.json -i podium-loadtest:us-east1:podium-global-1 start"
 alias dcsql-production="docker-cloudsql -c $POPSPATH/provisioning/terraform/podium/envs/podium-production/sa-keys/cloudsql-client-podium-production-credentials.json -i podium-production:us-east1:podium-global start"
 
+# PostgreSQL
+alias stop-postgresql='sudo -u postgres /Library/PostgreSQL/9.6/bin/pg_ctl -D /Library/PostgreSQL/9.6/data stop'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
   colorflag="--color"
