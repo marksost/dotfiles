@@ -9,6 +9,9 @@ export SCPATH="$SOURCEPATH/sc";
 # Add SoulCycle Podium path
 export PODIUMPATH="$SCPATH/podium-local";
 
+# Add LeafLink path
+export LLPATH="$SOURCEPATH/leaflink";
+
 # Add personal path
 export PERSONALPATH="$SOURCEPATH/msost";
 
@@ -36,10 +39,10 @@ export PERSONALKEYNAME="id_rsa";
 export SOULCYCLEKEYNAME="soulcycle";
 
 # Setup Go config pathing
-export FED_CONFIG=$SOURCEPATH/configs/fed.json;
-export MIGRATE_CONFIG=$SOURCEPATH/configs/migrate-local.json;
-export MILESTONES_CONFIG=$SOURCEPATH/configs/ms.json;
-export POPS_CONFIG=$SOURCEPATH/configs/pops.json;
+export FED_CONFIG=$PERSONALPATH/configs/fed.json;
+export MIGRATE_CONFIG=$PERSONALPATH/configs/migrate-local.json;
+export MILESTONES_CONFIG=$PERSONALPATH/configs/ms.json;
+export POPS_CONFIG=$PERSONALPATH/configs/pops.json;
 
 # Setup Github token
 export GITHUBTOKEN="<fill me in>";

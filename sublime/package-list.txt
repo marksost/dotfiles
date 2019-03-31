@@ -1,38 +1,38 @@
-API Blueprint.sublime-package
-Ansible Vault.sublime-package
-Backbone.sublime-package
-Bower.sublime-package
-Can I Use.sublime-package
-Console API Snippets (JavaScript).sublime-package
+API
+Ansible
+Can
+Console
 Diffy.sublime-package
 DocBlockr.sublime-package
-Dockerfile Syntax Highlighting.sublime-package
+Dockerfile
 Emmet.sublime-package
-Ginkgo Completions.sublime-package
+Ginkgo
 GitGutter.sublime-package
-Grunt Snippets.sublime-package
 HTML5.sublime-package
-Hipster Ipsum.sublime-package
+Hipster
 INI.sublime-package
-JS Snippets.sublime-package
+JS
 JSONLint.sublime-package
-JavaScript & NodeJS Snippets.sublime-package
+JavaScript
+L2U
 LuaAutocomplete.sublime-package
 LuaExtended.sublime-package
 LuaFormat.sublime-package
-Markdown Extended.sublime-package
-Markdown Preview.sublime-package
+Markdown
+MarkdownPreview.sublime-package
 PHP-Twig.sublime-package
-Package Control.sublime-package
+Package
 PackageResourceViewer.sublime-package
 PhpDoc.sublime-package
-SASS Snippets.sublime-package
-SCSS Snippets.sublime-package
+SASS
+SCSS
 SCSS.sublime-package
 Sass.sublime-package
 SideBarEnhancements.sublime-package
 SublimeLinter-eslint.sublime-package
+SublimeLinter-golint.sublime-package
 SublimeLinter-phplint.sublime-package
+SublimeLinter.sublime-package
 Terraform.sublime-package
 Twig.sublime-package
 jQuery.sublime-package
