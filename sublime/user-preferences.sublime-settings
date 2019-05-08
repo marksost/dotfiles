@@ -1,4 +1,10 @@
 {
+  "added_words":
+  [
+    "financials",
+    "Onboarding",
+    "onboarding"
+  ],
   "caret_style": "phase",
   "color_scheme": "Packages/User/SublimeLinter/Tree (SL).tmTheme",
   "default_line_ending": "unix",
@@ -11,13 +17,13 @@
   "folder_exclude_patterns":
   [
   ],
-  "font_size": 13,
   "highlight_line": true,
   "ignored_packages":
   [
     "Emmet",
     "Handlebars",
     "INI",
+    "Markdown",
     "Nodejs",
     "QuickPrint",
     "R Tools",
@@ -26,10 +32,17 @@
     "SASS Snippets",
     "SCSS",
     "SCSS Snippets",
+    "SublimeLinter-eslint",
     "Terminal",
     "Theme - Flatland",
     "Vintage",
     "Wordpress"
+  ],
+  "font_size": 13,
+  "font_face": "FiraCode-Regular",
+  "font_options":
+  [
+    "subpixel_antialias"
   ],
   "match_brackets_angle": true,
   "save_on_focus_lost": true,
