@@ -46,7 +46,7 @@ export MILESTONES_CONFIG=$PERSONALPATH/configs/ms.json;
 export POPS_CONFIG=$PERSONALPATH/configs/pops.json;
 
 # Setup Github token
-export GITHUBTOKEN="3215dcff1dde48535bd055442b2e0441357e4933";
+export GITHUBTOKEN="<replace me>";
 export POPS_RELEASE_GITHUB_TOKEN=$GITHUBTOKEN;
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
