@@ -18,11 +18,15 @@ export PERSONALPATH="$SOURCEPATH/msost";
 
 # Add GOPATH
 # export GOPATH="$SOURCEPATH/go";
-export GOPATH="$PODIUMPATH/applications/go"; # NOTE: For podium-local
+# export GOPATH="$PODIUMPATH/applications/go"; # NOTE: For podium-local
+export GOPATH="$LLPPATH/applications/go"; # NOTE: For llp-local
 
 # Add SoulCycle Go paths
 export SCGOPATH="$GOPATH/src/github.com/soulcycle";
 export POPSPATH="$GOPATH/src/github.com/soulcycle/pops";
+
+# Add LeafLink Go paths
+export LLGOPATH="$GOPATH/src/github.com/leaflink";
 
 # Add GOMAXPROCS
 export GOMAXPROCS=1;
