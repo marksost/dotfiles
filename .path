@@ -3,8 +3,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
-# Add `$GOPATH/bin` to `$PATH`
+# Add `$GOPATH/bin` and Podium's Go bin to `$PATH`
 export PATH="$PATH:$GOPATH/bin";
+export PATH="$PATH:$PODIUMPATH/applications/go/bin";
 
 # Add `$SCALA_HOME/bin` to `$PATH`
 export PATH="$PATH:$SCALA_HOME/bin";
