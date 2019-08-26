@@ -8,6 +8,9 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# DNS
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
 # Bash aliases
 alias sourcebp=". $HOME/.bash_profile"
 alias sourcebrc=". $HOME/.bashrc"
