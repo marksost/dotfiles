@@ -56,6 +56,9 @@ export POPS_RELEASE_GITHUB_TOKEN=$GITHUBTOKEN;
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
 
+# No pyc
+export PYTHONDONTWRITEBYTECODE=1;
+
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 # Omit duplicates and commands that begin with a space from history.
 export HISTSIZE='32768';
