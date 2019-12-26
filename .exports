@@ -52,6 +52,7 @@ export POPS_CONFIG=$PERSONALPATH/configs/pops.json;
 # Setup Github token
 export GITHUBTOKEN="<replace me>";
 export POPS_RELEASE_GITHUB_TOKEN=$GITHUBTOKEN;
+export LLPCTL_GITHUB_TOKEN=$GITHUBTOKEN;
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
