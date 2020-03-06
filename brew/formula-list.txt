@@ -6,6 +6,7 @@ argon2
 aspell
 autoconf
 automake
+aws-iam-authenticator
 boost
 brotli
 c-ares
@@ -21,6 +22,7 @@ coreutils
 curl-openssl
 dep
 eigen
+eksctl
 epsilon
 expat
 fleetctl
@@ -34,6 +36,7 @@ gdal
 gdbm
 geos
 gettext
+gh
 giflib
 glew
 glib
@@ -49,6 +52,7 @@ graphite2
 grep
 harfbuzz
 hdf5
+helm
 hexyl
 icu4c
 ideviceinstaller
@@ -69,6 +73,7 @@ kubernetes-cli
 kubernetes-helm
 kubespy
 kubetail
+ldns
 libassuan
 libdap
 libde265
@@ -97,11 +102,13 @@ libtiff
 libtool
 libunistring
 libusb
+libusbmuxd
 libxml2
 libyaml
 libzip
 little-cms2
 lua
+lzo
 mcrypt
 mercurial
 mhash
@@ -141,11 +148,15 @@ popt
 postgis
 postgresql
 proj
+protobuf
+protobuf-c
+protobuf@3.7
 pv
 py3cairo
 pyenv
 python
 python@2
+python@3.8
 qt
 readline
 redis
@@ -159,6 +170,7 @@ shared-mime-info
 siege
 sqlite
 szip
+telnet
 terraform
 tidy-html5
 tree
@@ -169,7 +181,9 @@ vault
 vim
 webp
 wget
+wtfutil
 x265
 xerces-c
 xz
+yarn
 zstd

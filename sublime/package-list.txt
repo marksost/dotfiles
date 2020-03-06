@@ -1,31 +1,42 @@
 API
+API blueprint
 Ansible
-Can
-Console
+Ansible Vault
+Can I use
+Console Snippets
 Diffy.sublime-package
 DocBlockr.sublime-package
-Dockerfile
+Dockerfile Syntax Highlighting
 Emmet.sublime-package
-Ginkgo
+Ginkgo Completions
 GitGutter.sublime-package
+GoSublime
+GraphQL
+Grunt
 HTML5.sublime-package
-Hipster
+Hipster Ipsum
 INI.sublime-package
-JS
+JS & Node Snippets
+jQuery
+JS Snippets
 JSONLint.sublime-package
-JavaScript
-L2U
+L2U Autocomplete
 LuaAutocomplete.sublime-package
 LuaExtended.sublime-package
 LuaFormat.sublime-package
-Markdown
+LiveReload
+Markdown Extended
+Markdown Editing
 MarkdownPreview.sublime-package
+Nano RC Syntax
+nginx
 PHP-Twig.sublime-package
 Package
 PackageResourceViewer.sublime-package
 PhpDoc.sublime-package
 SASS
-SCSS
+SASS Snippets
+SCSS Snippets
 SCSS.sublime-package
 Sass.sublime-package
 SideBarEnhancements.sublime-package
@@ -35,5 +46,8 @@ SublimeLinter-phplint.sublime-package
 SublimeLinter.sublime-package
 Terraform.sublime-package
 Twig.sublime-package
+Vue Syntax Highlight
+Vueify
+Wordcount
 jQuery.sublime-package
 nginx.sublime-package

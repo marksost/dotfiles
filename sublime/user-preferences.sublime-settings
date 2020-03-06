@@ -1,57 +1,60 @@
 {
-  "added_words":
-  [
-    "financials",
-    "Onboarding",
-    "onboarding"
-  ],
-  "caret_style": "phase",
-  "color_scheme": "Packages/User/SublimeLinter/Tree (SL).tmTheme",
-  "default_line_ending": "unix",
-  "detect_indentation": false,
-  "detect_slow_plugins": false,
-  "dictionary": "Packages/Language - English/en_US.dic",
-  "draw_indent_guides": false,
-  "fade_fold_buttons": false,
-  "find_selected_text": true,
-  "folder_exclude_patterns":
-  [
-  ],
-  "highlight_line": true,
-  "ignored_packages":
-  [
-    "Emmet",
-    "Handlebars",
-    "INI",
-    "Markdown",
-    "Nodejs",
-    "QuickPrint",
-    "R Tools",
-    "rsub",
-    "Sass",
-    "SASS Snippets",
-    "SCSS",
-    "SCSS Snippets",
-    "SublimeLinter-eslint",
-    "Terminal",
-    "Theme - Flatland",
-    "Vintage",
-    "Wordpress"
-  ],
-  "font_size": 13,
-  "font_face": "FiraCode-Regular",
-  "font_options":
-  [
-    "subpixel_antialias"
-  ],
-  "match_brackets_angle": true,
-  "save_on_focus_lost": true,
-  "scroll_past_end": true,
-  "show_definitions": false,
-  "spell_check": true,
-  "tab_completion": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "use_simple_full_screen": true,
-  "word_wrap": true
+    "added_words":
+    [
+        "financials",
+        "Onboarding",
+        "onboarding",
+        "hire's",
+        "tada",
+        "workflow"
+    ],
+    "caret_style": "phase",
+    "color_scheme": "Packages/User/SublimeLinter/Tree (SL).tmTheme",
+    "default_line_ending": "unix",
+    "detect_indentation": false,
+    "detect_slow_plugins": false,
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "draw_indent_guides": false,
+    "fade_fold_buttons": false,
+    "find_selected_text": true,
+    "folder_exclude_patterns":
+    [
+    ],
+    "font_face": "FiraCode-Regular",
+    "font_options":
+    [
+        "subpixel_antialias"
+    ],
+    "font_size": 10,
+    "highlight_line": true,
+    "ignored_packages":
+    [
+        "Emmet",
+        "Handlebars",
+        "INI",
+        "Markdown",
+        "Nodejs",
+        "QuickPrint",
+        "R Tools",
+        "rsub",
+        "Sass",
+        "SASS Snippets",
+        "SCSS",
+        "SCSS Snippets",
+        "SublimeLinter-eslint",
+        "Terminal",
+        "Theme - Flatland",
+        "Vintage",
+        "Wordpress"
+    ],
+    "match_brackets_angle": true,
+    "save_on_focus_lost": true,
+    "scroll_past_end": true,
+    "show_definitions": false,
+    "spell_check": true,
+    "tab_completion": true,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "use_simple_full_screen": true,
+    "word_wrap": true
 }
