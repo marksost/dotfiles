@@ -22,7 +22,6 @@ coreutils
 curl-openssl
 dep
 eigen
-eksctl
 epsilon
 expat
 fleetctl
@@ -48,6 +47,7 @@ gnupg
 gnutls
 go
 gobject-introspection
+gpg
 graphite2
 grep
 harfbuzz
@@ -137,8 +137,6 @@ pcre
 pcre2
 perl
 php
-php@7.0
-phplint
 pinentry
 pixman
 pkg-config
@@ -155,7 +153,6 @@ pv
 py3cairo
 pyenv
 python
-python@2
 python@3.8
 qt
 readline
