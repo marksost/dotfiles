@@ -213,17 +213,17 @@ function loop5() {
 # Forwards Kubectl commands to the LLP development cluster in us-west-2
 function llp-dev-k8s-tunnel() {
     SSHUTTLING='llp-dev-us-west-2 tunnel active'
-    sshuttle --daemon -r ubuntu@dev-us-bastion.leaflink.io:14955 10.60.0.0/18 10.20.0.0/16 --ssh-cmd 'ssh -i ~/.ssh/llp-devops'
+    sshuttle --daemon --pidfile=/tmp/sshuttle.pid -r ubuntu@dev-us-bastion.leaflink.io:14955 10.60.0.0/18 10.20.0.0/16 --ssh-cmd 'ssh -i ~/.ssh/llp-devops'
 }
 
 # Forwards Kubectl commands to the LLP production cluster in us-west-2
 function llp-prod-k8s-tunnel() {
     SSHUTTLING='llp-prod-us-west-2 tunnel active'
-    sshuttle --daemon -r ubuntu@prod-us-bastion.leaflink.io:14955 10.60.0.0/18 10.30.0.0/16 --ssh-cmd 'ssh -i ~/.ssh/llp-devops-prod'
+    sshuttle --daemon --pidfile=/tmp/sshuttle.pid -r ubuntu@prod-us-bastion.leaflink.io:14955 10.60.0.0/18 10.30.0.0/16 --ssh-cmd 'ssh -i ~/.ssh/llp-devops-prod'
 }
 
 # Kills sshuttle daemon forwaring Kubectl commands to a LLP cluster
 function kill-llp-tunnel() {
     SSHUTTLING='false'
-    kill $(ps aux | grep "sshuttle --daemon" | grep -v "grep" | awk '{print $2}')
+    kill $(cat /tmp/sshuttle.pid)
 }

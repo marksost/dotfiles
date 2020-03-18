@@ -61,7 +61,7 @@ export PYTHONIOENCODING='UTF-8';
 export PYTHONDONTWRITEBYTECODE=1;
 
 # SSH Tunneling status
-export SSHUTTLING='false';
+export SSHUTTLING=`[[ ! -f "/tmp/sshuttle.pid" ]] && echo 'false' || echo 'tunnel active'`;
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 # Omit duplicates and commands that begin with a space from history.
