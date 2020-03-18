@@ -61,6 +61,10 @@ prompt_git() {
   fi;
 }
 
+shuttling() {
+    [[ ! -z "$SSHUTTLING" ]] && [[ "$SSHUTTLING" != "false" ]] && echo $SSHUTTLING || echo "not tunneling"
+}
+
 if tput setaf 1 &> /dev/null; then
   tput sgr0; # reset colors
   bold=$(tput bold);
@@ -118,7 +122,7 @@ PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh";
-PS1='$(kube_ps1)'$PS1;
+PS1="\$(kube_ps1) \[${white}\] / \[${purple}\] SSH Tunnel status: \$(shuttling)$PS1";
 
 export PS1;
 

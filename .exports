@@ -60,6 +60,9 @@ export PYTHONIOENCODING='UTF-8';
 # No pyc
 export PYTHONDONTWRITEBYTECODE=1;
 
+# SSH Tunneling status
+export SSHUTTLING='false';
+
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 # Omit duplicates and commands that begin with a space from history.
 export HISTSIZE='32768';
