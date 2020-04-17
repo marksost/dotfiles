@@ -227,3 +227,24 @@ function kill-llp-tunnel() {
     SSHUTTLING='false'
     kill $(cat /tmp/sshuttle.pid)
 }
+
+# Checks out `development` branch, pulls the latest, and deletes either the branch
+# specified as $1 argument or the current working branch if none is passed in
+function developmerged() {
+    DELETE_BRANCH=${1-$(git_branch_name)}
+    git checkout development && gfp && git branch -D $DELETE_BRANCH
+}
+
+# Checks out `master` branch, pulls the latest, and deletes either the branch
+# specified as $1 argument or the current working branch if none is passed in
+function mastermerged() {
+    DELETE_BRANCH=${1-$(git_branch_name)}
+    git checkout master && gfp && git branch -D $DELETE_BRANCH
+}
+
+# Checks out `staging` branch, pulls the latest, and deletes either the branch
+# specified as $1 argument or the current working branch if none is passed in
+function stagingmerged() {
+    DELETE_BRANCH=${1-$(git_branch_name)}
+    git checkout staging && gfp && git branch -D $DELETE_BRANCH
+}
