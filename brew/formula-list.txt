@@ -194,11 +194,6 @@ poppler-qt5
 popt
 postgis
 postgresql
-proj
-proj@7
-protobuf
-protobuf-c
-protobuf@3.7
 pv
 py3cairo
 pyenv

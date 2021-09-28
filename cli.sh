@@ -30,21 +30,5 @@ curl -sL https://raw.githubusercontent.com/marksost/docker-redis/master/install.
 mv docker-cloudsql /usr/local/bin/.
 mv docker-redis /usr/local/bin/.
 
-# Install NPM packages
-npm install -g eslint jshint bower grunt-cli
-
 # Make sure Ruby gems are writable
 sudo chown -R $(whoami) /Library/Ruby/Gems
-
-# Install gems
-gem install github_changelog_generator
-gem install travis
-
-# Get and install PIP
-cd /tmp
-curl -O https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-
-# Install PIP utilities
-pip3 install --upgrade pip setuptools --ignore-installed six
-pip3 install awscli virtualenv virtualenvwrapper --ignore-installed six
