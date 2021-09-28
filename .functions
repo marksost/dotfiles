@@ -235,6 +235,13 @@ function developmerged() {
     git checkout development && gfp && git branch -D $DELETE_BRANCH
 }
 
+# Checks out `main` branch, pulls the latest, and deletes either the branch
+# specified as $1 argument or the current working branch if none is passed in
+function mainmerged() {
+    DELETE_BRANCH=${1-$(git_branch_name)}
+    git checkout main && gfp && git branch -D $DELETE_BRANCH
+}
+
 # Checks out `master` branch, pulls the latest, and deletes either the branch
 # specified as $1 argument or the current working branch if none is passed in
 function mastermerged() {

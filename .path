@@ -16,6 +16,9 @@ export PATH="$PATH:$HOME/.composer/vendor/bin";
 # Add Postgres bin to `$PATH`
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin";
 
+# Add Python bin to `$PATH`
+export PATH="$PATH:$HOME/Library/Python/3.7/bin";
+
 # Add RVM to `$PATH`
 export PATH="$PATH:$HOME/.rvm/bin";
 

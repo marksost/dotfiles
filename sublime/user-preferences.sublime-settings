@@ -9,7 +9,7 @@
         "workflow"
     ],
     "caret_style": "phase",
-    "color_scheme": "Packages/User/SublimeLinter/Tree (SL).tmTheme",
+    "color_scheme": "Packages/User/Themes/Tree (SL).tmTheme",
     "default_line_ending": "unix",
     "detect_indentation": false,
     "detect_slow_plugins": false,
@@ -25,7 +25,7 @@
     [
         "subpixel_antialias"
     ],
-    "font_size": 10,
+    "font_size": 13,
     "highlight_line": true,
     "ignored_packages":
     [
@@ -45,7 +45,7 @@
         "Terminal",
         "Theme - Flatland",
         "Vintage",
-        "Wordpress"
+        "Wordpress",
     ],
     "match_brackets_angle": true,
     "save_on_focus_lost": true,
@@ -56,5 +56,5 @@
     "tab_size": 4,
     "translate_tabs_to_spaces": true,
     "use_simple_full_screen": true,
-    "word_wrap": true
+    "word_wrap": true,
 }
