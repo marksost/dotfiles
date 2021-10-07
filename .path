@@ -18,12 +18,17 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin";
 
 # Add Python bin to `$PATH`
 export PATH="$PATH:$HOME/Library/Python/3.7/bin";
+export PATH="$PATH:$HOME/Library/Python/3.8/bin";
 
 # Add RVM to `$PATH`
 export PATH="$PATH:$HOME/.rvm/bin";
 
-# Add sbin to the `$PATH`
-export PATH="/usr/local/sbin::$PATH";
+# Add sbin to `$PATH`
+export PATH="/usr/local/sbin:$PATH";
+
+# Add Homebrew to `$PATH`
+export PATH="/opt/homebrew/bin:$PATH";
+export PATH="/opt/homebrew/sbin:$PATH";
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then source "$HOME/google-cloud-sdk/path.bash.inc"; fi
