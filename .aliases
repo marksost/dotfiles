@@ -8,6 +8,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
 # DNS
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
