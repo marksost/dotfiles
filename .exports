@@ -51,7 +51,7 @@ export MILESTONES_CONFIG=$PERSONALPATH/configs/ms.json;
 export POPS_CONFIG=$PERSONALPATH/configs/pops.json;
 
 # Setup Github token
-export GITHUBTOKEN="<replace me>";
+export GITHUBTOKEN="";
 export POPS_RELEASE_GITHUB_TOKEN=$GITHUBTOKEN;
 export LLPCTL_GITHUB_TOKEN=$GITHUBTOKEN;
 
@@ -79,3 +79,9 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Add NVM pathing
+export NVM_DIR="$HOME/.nvm"
+
+# Add Pyenv pathing
+export PYENV_ROOT="$HOME/.pyenv"

@@ -31,6 +31,7 @@ alias mk='minikube'
 alias mkde='eval $(minikube docker-env)'
 
 # Kubectl aliases
+alias kctl22='/opt/homebrew/opt/kubernetes-cli@1.22/bin/kubectl'
 alias kctl='kubectl'
 alias kexec='kubectl exec -it'
 alias kcr='kubectl create -f'
@@ -46,6 +47,7 @@ alias kns='kubens'
 
 # GCloud aliases
 alias gcp='gcloud'
+alias gyb='~/bin/gyb/gyb'
 
 # Docker compose aliases
 alias dc='docker-compose'
