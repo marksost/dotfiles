@@ -34,12 +34,6 @@ export GOMAXPROCS=1;
 # Add SCALA_HOME
 export SCALA_HOME="$SOURCEPATH/scala";
 
-# Set virualenv vars
-export WORKON_HOME=$HOME/.virtualenvs;
-export PROJECT_HOME=$HOME/Devel;
-export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
-source `which virtualenvwrapper.sh`;
-
 # Set SSH key name env vars
 export PERSONALKEYNAME="id_rsa";
 export SOULCYCLEKEYNAME="soulcycle";
